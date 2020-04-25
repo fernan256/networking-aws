@@ -1,6 +1,6 @@
 # Get a vpc ID
 
-vpc_id = $(aws ec2 describe-vpcs --filters Name="tag:Name",Values="<vpc-name>" \
+vpc_id = $(aws ec2 describe-vpcs --filters Name="tag:Name",Values="barracuda-primary" \
   --query 'Vpcs[0].VpcId' --output text)
 
 # Add another CIDR block to the VPC
@@ -24,7 +24,7 @@ subnet_6=$(aws ec2 create-subnet --availability-zone-id $az \
 subnet_6_id=$(echo $subnet_6 | jq .Subnet.SubnetId -r)
 
 aws ec2 create-tags --resources $subnet_6_id \
-  --tags Key=Name,Value=subnet-6 Key=Company,Value=Globomantics Key=Network,Value=Private
+  --tags Key=Name,Value=subnet-6 Key=Company,Value=Barracuda Key=Network,Value=Private
 
 # Add IPv6 to the VPC
 
@@ -74,8 +74,8 @@ ami_id=$(aws ssm get-parameters --names /aws/service/ami-amazon-linux-latest/amz
 aws ec2 run-instances --image-id $ami_id --count 1 \
   --instance-type t2.micro --key-name AdvNet \
   --security-group-ids $sg_id --subnet-id $subnet_1_id \
-  --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=web-1},{Key=Company,Value=Globomantics}]' \
-  'ResourceType=volume,Tags=[{Key=Name,Value=web-1},{Key=Company,Value=Globomantics}]'
+  --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=web-1},{Key=Company,Value=Barracuda}]' \
+  'ResourceType=volume,Tags=[{Key=Name,Value=web-1},{Key=Company,Value=Barracuda}]'
 
 # Get the instance id and the eni id
 
@@ -107,8 +107,8 @@ $attach_id=$(aws ec2 attach-network-interface --device-index 1 --instance-id $we
 aws ec2 run-instances --image-id $ami_id --count 1 \
   --instance-type t2.micro --key-name AdvNet \
   --security-group-ids $sg_id --subnet-id $subnet_1_id \
-  --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=web-2},{Key=Company,Value=Globomantics}]' \
-  'ResourceType=volume,Tags=[{Key=Name,Value=web-2},{Key=Company,Value=Globomantics}]'
+  --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=web-2},{Key=Company,Value=Barracuda}]' \
+  'ResourceType=volume,Tags=[{Key=Name,Value=web-2},{Key=Company,Value=Barracuda}]'
 
 # Get the instance id and the eni id
 

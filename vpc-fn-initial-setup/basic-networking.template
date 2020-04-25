@@ -12,11 +12,11 @@
                 "Tags": [
                     {
                         "Key": "Company",
-                        "Value": "Globomantics"
+                        "Value": "Barracuda"
                     },
                     {
                         "Key": "Name",
-                        "Value": "globo-primary"
+                        "Value": "barracuda-primary"
                     }
                 ]
             }
@@ -31,7 +31,7 @@
                 "Tags": [
                     {
                         "Key": "Company",
-                        "Value": "Globomantics"
+                        "Value": "Barracuda"
                     },
                     {
                         "Key": "Network",
@@ -62,7 +62,7 @@
                 "Tags": [
                     {
                         "Key": "Company",
-                        "Value": "Globomantics"
+                        "Value": "Barracuda"
                     },
                     {
                         "Key": "Network",
@@ -93,7 +93,7 @@
                 "Tags": [
                     {
                         "Key": "Company",
-                        "Value": "Globomantics"
+                        "Value": "Barracuda"
                     },
                     {
                         "Key": "Network",
@@ -124,7 +124,7 @@
                 "Tags": [
                     {
                         "Key": "Company",
-                        "Value": "Globomantics"
+                        "Value": "Barracuda"
                     },
                     {
                         "Key": "Network",
@@ -155,7 +155,7 @@
                 "Tags": [
                     {
                         "Key": "Company",
-                        "Value": "Globomantics"
+                        "Value": "Barracuda"
                     },
                     {
                         "Key": "Network",
@@ -182,7 +182,7 @@
                 "Tags": [
                     {
                         "Key": "Company",
-                        "Value": "Globomantics"
+                        "Value": "Barracuda"
                     }
                 ]
             }
@@ -207,7 +207,7 @@
                 "Tags": [
                     {
                         "Key": "Company",
-                        "Value": "Globomantics"
+                        "Value": "Barracuda"
                     }
                 ]
             }
@@ -267,7 +267,7 @@
                 "Tags": [
                     {
                         "Key": "Company",
-                        "Value": "Globomantics"
+                        "Value": "Barracuda"
                     }
                 ]
             }
